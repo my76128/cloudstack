@@ -166,14 +166,6 @@ public class DummyResource implements ServerResource {
 
     @Override
     public boolean configure(String name, Map<String, Object> params) {
-        _name = name;
-
-        String value = (String)params.get("type");
-        _type = Host.Type.valueOf(value);
-
-        value = (String)params.get("negative.reply");
-        _negative = Boolean.parseBoolean(value);
-        setParams(params);
         return true;
     }
 
